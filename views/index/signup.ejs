@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <html>
+
+
 <head>
 	<title>Crime report management</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">		
-
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">		
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 	</head>
@@ -50,17 +52,23 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
 	<!-- LOGIN FORM -->
 	<!-- LOGIN FORM -->
+
 	<form action="/signup" method="post" name="frm">
 		<div class="form-group">
 			<label><strong><font size="+1"><span style="color:black">Username</span></font></strong></label>
-			<input type="text" class="form-control" placeholder="username" name="user_name" required>
+			<input type="text" class="form-control" placeholder="username" name="user_name" required >
 		</div>
 		<div class="form-group">
 			<label ><strong><font size="+1"><span style="color:black" >Password</span></font></strong></label>
-			<input type="password" pattern=".{5,15}" class="form-control" placeholder="password" name="password">
+			<input type="password" pattern=".{5,15}" class="form-control" placeholder="password (minimun 5 characters)" name="password">
+		</div>
+		<div class="form-group">
+			<label ><strong><font size="+1"><span style="color:black" >Confirm Password</span></font></strong></label>
+			<input type="password" pattern=".{5,15}" class="form-control" placeholder="confirm password" name="cpassword">
 		</div>
 
 		<button type="submit"  class="btn btn-success btn-lg">Signup</button>
+	
 	</form>
 
 	<hr  style="border: 0;
@@ -76,4 +84,5 @@
 
 </div>
 </body>
+
 </html>
