@@ -16,6 +16,9 @@ router.post("/signup", function(req, res, next){
     }
     var user=req.body.user_name;
     var password=req.body.password;
+    var cpassword=req.body.cpassword;
+    if(password===cpassword)
+    {
         var sql="INSERT INTO login (username, password) VALUES (?, ?)";
         connection.query(sql,[user, password], function (err, rest) {
             if (err)  {
@@ -29,8 +32,12 @@ router.post("/signup", function(req, res, next){
                 console.log("1 record inserted");
                  }
             });
+    }
+    else{
+         req.flash("error", "Password mismatch");
+                res.redirect("/signup");
+    }
 });
-
 
 //Sign up form
 router.get("/signup", function(req, res, next){
